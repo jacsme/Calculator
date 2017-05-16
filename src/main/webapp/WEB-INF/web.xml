@@ -26,7 +26,11 @@
     <load-on-startup>1</load-on-startup>
 		
 	</servlet>
-	
+	<listener>
+		<listener-class>
+             com.cal.cache.CurrencyCache
+        </listener-class>
+   	</listener>
 	<servlet-mapping>
 		<servlet-name>Calculator</servlet-name>
 		<url-pattern>/api/*</url-pattern>

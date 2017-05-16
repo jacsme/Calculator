@@ -14,11 +14,11 @@ public class ResourceUtil {
 		String keyresult = null;
 
 		try {
-
-			input = new FileInputStream("currency.properties");
+			prop.load(ResourceUtil.class.getClassLoader().getResourceAsStream("/currency.properties"));
+			//input = new FileInputStream("currency.properties");
 
 			// load a properties file
-			prop.load(input);
+			//prop.load(input);
 			keyresult = prop.getProperty(key);
 
 		} catch (IOException ex) {
